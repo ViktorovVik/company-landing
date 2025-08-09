@@ -11,21 +11,21 @@ class Header {
   }
 
   constructor() {
-    this.rootElement = document.querySelector(this.selectors.root);
-    this.overlay = this.rootElement.querySelector(this.selectors.overlay);
-    this.burgerButtonElement = this.rootElement.querySelector(this.selectors.burgerButton);
-    this.bindEvents();
+    this.rootElement = document.querySelector(this.selectors.root)
+    this.overlayElement = this.rootElement.querySelector(this.selectors.overlay)
+    this.burgerButtonElement = this.rootElement.querySelector(this.selectors.burgerButton)
+    this.bindEvents()
   }
 
-  onBurgerButtonClick = () => {
-    this.burgerButtonElement.classList.toggle(this.stateClasses.isActive);
-    this.overlay.classList.toggle(this.stateClasses.isActive);
-    document.documentElement.classList.toggle(this.stateClasses.isLock);
+  onClickButtonBurger = () => {
+    this.overlayElement.classList.toggle(this.stateClasses.isActive)
+    this.burgerButtonElement.classList.toggle(this.stateClasses.isActive)
+    document.documentElement.classList.toggle(this.stateClasses.isLock)
   }
 
   bindEvents() {
-    this.burgerButtonElement.addEventListener('click', this.onBurgerButtonClick);
+    this.burgerButtonElement.addEventListener('click', this.onClickButtonBurger)
   }
 }
 
-export default Header;
+export default Header

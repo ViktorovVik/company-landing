@@ -1,19 +1,18 @@
 @use '../helpers' as *;
 
 .button {
-  @include flex-center;
+  display: inline-flex;
+  justify-content: center;
+  padding: rem(20) rem(63);
+  color: var(--color-light);
+  background-color: var(--color-dark);
+  font-size: rem(17);
+  font-weight: 600;
 
   &--light {
     color: var(--color-dark);
     background-color: var(--color-light);
   }
-
-  padding-block: rem(20);
-  width: rem(180);
-  color: var(--color-light);
-  background-color: var(--color-dark);
-  font-size: rem(17);
-  font-weight: 600;
 
   @include hover {
     opacity: .7;

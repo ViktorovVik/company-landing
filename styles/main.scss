@@ -4,6 +4,11 @@
 @use 'utils';
 @use 'globals';
 
+@use 'blocks/button';
+@use 'blocks/logo';
+@use 'blocks/burger-menu';
+@use 'blocks/header';
+
 
 //.header,
 //main > *:not(:last-child),
