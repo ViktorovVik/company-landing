@@ -13,6 +13,76 @@
   <script src="./scripts/main.js" type="module" defer></script>
 </head>
 <body>
+  <header class="header" data-js-header>
+    <div class="header__inner container">
+      <a class="header__logo logo" href="/" aria-label="Home Page" title="Home Page">
+        <img
+          class="logo__img"
+          src="./assets/logo/logo.svg"
+          alt=""
+          width="146"
+          height="42"
+        />
+      </a>
+      <div class="header__overlay" data-js-header-overlay>
+        <nav class="header__menu">
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
+              <a
+                class="header__menu-link"
+                href="/"
+              >
+                Portfolio
+              </a>
+            </li>
+            <li class="header__menu-item">
+              <a
+                class="header__menu-link"
+                href="/"
+              >
+                Team
+              </a>
+            </li>
+            <li class="header__menu-item">
+              <a
+                class="header__menu-link"
+                href="/"
+              >
+                About
+              </a>
+            </li>
+            <li class="header__menu-item">
+              <a
+                class="header__menu-link"
+                href="/"
+              >
+                Blog
+              </a>
+            </li>
+            <li class="header__menu-item">
+              <a
+                class="header__menu-link"
+                href="/"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <button
+        class="header__burger-button burger-button visible-mobile"
+        type="button"
+        aria-label="Open menu"
+        title="Open menu"
+        data-js-header-burger-button
+      >
+        <span class="burger-button__line"></span>
+        <span class="burger-button__line"></span>
+        <span class="burger-button__line"></span>
+        </button>
+    </div>
+  </header>
 
 
 </body>
