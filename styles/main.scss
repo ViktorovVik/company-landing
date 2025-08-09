@@ -8,7 +8,10 @@
 @use 'blocks/logo';
 @use 'blocks/burger-menu';
 @use 'blocks/header';
-
+@use 'blocks/hero';
+@use 'blocks/modal';
+@use 'blocks/form-group';
+@use 'blocks/about';
 
 //.header,
 //main > *:not(:last-child),

@@ -1,0 +1,19 @@
+@use '../helpers' as *;
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(16);
+  font-weight: 500;
+  color: var(--color-dark);
+  font-size: rem(18);
+
+  &__required-star {
+    color: var(--color-red);
+  }
+
+  &__input {
+    padding: rem(10) rem(15);
+    border: rem(1) solid var(--color-grey);
+  }
+}
