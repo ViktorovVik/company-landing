@@ -1,0 +1,82 @@
+@use 'helpers' as *;
+
+html {
+  &.is-lock {
+    overflow: hidden;
+  }
+}
+
+body {
+  @include fluid-text(18, 14);
+
+  font-family: var(--font-family-base);
+  letter-spacing: -0.03em;
+  color: var(--color-gray-50);
+  background-color: var(--color-light);
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.h1,
+.h2,
+.h3 {
+  color: var(--color-light);
+}
+
+
+.h1 {
+  @include fluid-text(96, 40);
+}
+
+.h2 {
+  @include fluid-text(32, 25);
+  line-height: 1.3;
+}
+
+.h3 {
+  @include fluid-text(24, 18);
+  line-height: 1.4;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: inherit;
+
+  @include hover {
+    color: var(--color-accent);
+  }
+
+  &[class] {
+    text-decoration: none;
+  }
+}
+
+:focus-visible {
+  outline: rem(2) dashed var(--color-dark);
+  outline-offset: rem(4);
+  transition-duration: 0s !important;
+}
+
+a,
+button {
+  &[aria-label] {
+    position: relative;
+
+    &:before {
+      content: '';
+      @include abs-center;
+      @include square(rem(44))
+    }
+  }
+}
