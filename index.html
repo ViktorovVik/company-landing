@@ -84,6 +84,129 @@
     </div>
   </header>
 
+  <main class="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__inner container">
+        <h1 class="hero__title h1" id="hero-title">We&nbsp;produce the&nbsp;best products</h1>
+         <div class="hero__description">
+           <p>Mattis quam, lectus et&nbsp;justo amet, tortor, lectus dapibus est. Habitasse efficitur sodales vel est.</p>
+         </div>
+        <button
+          class="hero__button button button--light"
+          type="button"
+          aria-haspopup="dialog"
+          aria-controls="registerModal"
+          data-js-modal-open="contactUsModal"
+        >
+          Contacts us
+        </button>
+      </div>
+    </section>
 
+    <section class="about" aria-labelledby="about-title">
+      <div class="about__inner container">
+        <div class="about__body">
+          <div class="about__col">
+            <ul class="about__col-list">
+              <li class="about__col-item">
+                <p class="about__col-value">20,000</p>
+                <p class="about__col-description">completed projects</p>
+              </li>
+              <li class="about__col-item">
+                <p class="about__col-value">10,000</p>
+                <p class="about__col-description">prototypes</p>
+              </li>
+              <li class="about__col-item">
+                <p class="about__col-value">347</p>
+                <p class="about__col-description">completed projects</p>
+              </li>
+            </ul>
+          </div>
+          <div class="about__col">
+            <h2 class="about__col-title h2 h2--bigger">Amet, mattis dapibus malesuada arcu dapibus nec efficitur et&nbsp;dictum.  In&nbsp;sit odio. Tempus leo, dictum.</h2>
+            <div class="about__col-text">
+              <p>Amet, mattis dapibus malesuada arcu dapibus nec efficitur et&nbsp;dictum. In&nbsp;sit odio. Tempus leo, dictum. Sit mattis mattis lorem cursus velit sit sed et&nbsp;vitae quam, sed nulla dapibus venenatis odio.</p>
+              <p>Venenatis sapien aenean adipiscing lacinia nec lacinia lacinia et&nbsp;quam, ultricies. Dictum. Ipsum sodales sit id&nbsp;nec sed sodales mattis mollis quis, pellentesque habitasse&nbsp;ex.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog
+    class="modal fadeIn"
+    id="contactUsModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-title-sign-in"
+    data-js-modal
+  >
+    <div class="modal__content">
+      <button
+        class="modal__close-button"
+        type="button"
+        aria-label="Close button"
+        title="Close button"
+        data-js-modal-close
+      >
+        <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+          <path  clip-rule="evenodd" d="M0.292893 0.292893C0.683417 -0.0976311 1.31658 -0.0976311 1.70711 0.292893L7.99999 6.58578L14.2929 0.292893C14.6834 -0.0976313 15.3166 -0.0976307 15.7071 0.292894C16.0976 0.683418 16.0976 1.31658 15.7071 1.70711L9.41421 7.99999L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L7.99999 9.41421L1.70711 15.7071C1.31658 16.0976 0.683418 16.0976 0.292894 15.7071C-0.0976307 15.3166 -0.0976313 14.6834 0.292893 14.2929L6.58578 7.99999L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683417 0.292893 0.292893Z"/>
+        </svg>
+      </button>
+      <header class="modal__header">
+        <h3 class="modal__title h3" id="modal-title-sign-in">Contact Us</h3>
+        <p class="modal__text">Enter the fields with your actual info, please! We&nbsp;will call you back.</p>
+      </header>
+      <form
+        class="modal__form"
+      >
+        <div class="modal__form-group form-group">
+          <label  class="form-group__label" for="userName">
+            Name <span class="form-group__required-star" aria-hidden="true">*</span></label>
+          <input
+            class="form-group__input"
+            type="text"
+            id="userName"
+            name="name"
+            required
+            minlength="2"
+            placeholder="Ivan"
+            autocomplete="name"
+          >
+        </div>
+        <div class="modal__form-group form-group">
+          <label  class="form-group__label" for="userPhone">
+            Phone <span class="form-group__required-star" aria-hidden="true">*</span></label>
+          <input
+            class="form-group__input"
+            type="tel"
+            id="userPhone"
+            name="phone"
+            required
+            minlength="8"
+            placeholder="+7-999-999-99-99"
+            autocomplete="tel"
+          >
+        </div>
+        <div class="modal__form-group form-group">
+          <label  class="form-group__label" for="userEmail">
+            Email <span class="form-group__required-star" aria-hidden="true">*</span></label>
+          <input
+            class="form-group__input"
+            type="email"
+            id="userEmail"
+            name="userEmail"
+            required
+            placeholder="example@email.com"
+            autocomplete="email"
+          >
+        </div>
+        <button class="modal__send-button button" type="submit">
+          Send
+        </button>
+      </form>
+    </div>
+  </dialog>
 </body>
 </html>

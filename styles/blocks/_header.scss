@@ -1,8 +1,7 @@
 @use '../helpers' as *;
 
 .header {
-  position: sticky;
-  z-index: 100;
+  position: absolute;
   left: 0;
   top: 0;
   padding-block: rem(40);
@@ -12,8 +11,6 @@
   animation-timeline: scroll();
   animation-range: rem(100) rem(200);
 
-
-  
   @keyframes scrolling-header {
     to {
       background-color: var(--color-dark);

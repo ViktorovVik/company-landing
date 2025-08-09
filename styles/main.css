@@ -213,6 +213,7 @@ svg * {
   --color-light: #ffffff;
   --color-grey: #838383;
   --color-dark: #1d1d1f;
+  --color-red: #ff5500;
   --font-family-base: "Inter", sans-serif;
   --container-width: 75rem;
   --container-padding-x: 0.9375rem;
@@ -314,9 +315,9 @@ html.is-lock {
 
 body {
   font-family: var(--font-family-base);
-  letter-spacing: -0.03em;
+  letter-spacing: 0.03em;
   color: var(--color-light);
-  background-color: var(--color-dark);
+  background-color: var(--color-light);
 }
 
 .main {
@@ -326,16 +327,28 @@ body {
 .h1,
 .h2,
 .h3 {
-  color: var(--color-light);
+  font-weight: 600;
 }
 
 .h1 {
-  font-size: clamp(2.5rem, 1.6078431373rem + 3.660130719vw, 6rem);
+  font-size: clamp(2.1875rem, 1.2156862745rem + 3.9869281046vw, 6rem);
+  color: var(--color-light);
+  line-height: 1.2;
+}
+@media (width <= 47.99875rem) {
+  .h1 {
+    width: 18.75rem;
+  }
 }
 
 .h2 {
   font-size: clamp(1.5625rem, 1.4509803922rem + 0.4575163399vw, 2rem);
   line-height: 1.3;
+}
+.h2--bigger {
+  font-size: clamp(1.875rem, 1.6519607843rem + 0.9150326797vw, 2.75rem);
+  line-height: 1.4;
+  font-weight: 700;
 }
 
 .h3 {
@@ -376,10 +389,6 @@ a[class] {
   transition-duration: 0s !important;
 }
 
-a[aria-label],
-button[aria-label] {
-  position: relative;
-}
 a[aria-label]:before,
 button[aria-label]:before {
   content: "";
@@ -391,6 +400,11 @@ button[aria-label]:before {
   height: 2.75rem;
 }
 
+ul, ol, li {
+  margin: 0;
+  padding: 0;
+}
+
 .button {
   display: inline-flex;
   justify-content: center;
@@ -399,10 +413,23 @@ button[aria-label]:before {
   background-color: var(--color-dark);
   font-size: 1.0625rem;
   font-weight: 600;
+  border: none;
 }
 .button--light {
   color: var(--color-dark);
   background-color: var(--color-light);
+}
+@media (any-hover: hover) {
+  .button--light:hover {
+    color: var(--color-light);
+    background-color: var(--color-grey);
+  }
+}
+@media (any-hover: none) {
+  .button--light:active {
+    color: var(--color-light);
+    background-color: var(--color-grey);
+  }
 }
 @media (any-hover: hover) {
   .button:hover {
@@ -464,8 +491,7 @@ button[aria-label]:before {
 }
 
 .header {
-  position: sticky;
-  z-index: 100;
+  position: absolute;
   left: 0;
   top: 0;
   padding-block: 2.5rem;
@@ -539,6 +565,196 @@ button[aria-label]:before {
   .header__menu-link {
     font-size: 1.25rem;
   }
+}
+
+.hero {
+  padding-top: calc(7.5rem + 9.375rem);
+  height: 100vh;
+  min-height: 56.25rem;
+  background-image: url("../assets/images/hero/bg.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media (width <= 47.99875rem) {
+  .hero {
+    height: auto;
+    min-height: auto;
+    padding-top: calc(5rem + 6.25rem);
+    padding-bottom: 2.5rem;
+  }
+}
+.hero__inner {
+  display: grid;
+  row-gap: 3.125rem;
+}
+@media (width <= 63.99875rem) {
+  .hero__inner {
+    row-gap: 1.875rem;
+  }
+}
+.hero__title {
+  max-width: 58.5rem;
+  width: 100%;
+}
+.hero__description p {
+  max-width: 29.25rem;
+}
+.hero__button {
+  justify-self: start;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3.125rem 1.875rem;
+  margin-inline: 0;
+  max-width: 37.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  animation: fadeInCenter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media (width <= 90.06125rem) {
+  .modal {
+    top: 5%;
+    transform: translateX(-50%);
+    animation: fadeInTop 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+@media (width <= 47.99875rem) {
+  .modal {
+    padding-inline: 0.9375rem;
+    padding-bottom: 1.5625rem;
+  }
+}
+.modal::backdrop {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  animation: backdropFadeIn 0.3s ease-out;
+}
+@keyframes fadeInCenter {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes fadeInTop {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+@keyframes backdropFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.modal__content {
+  display: grid;
+  row-gap: 1.875rem;
+  width: 100%;
+}
+.modal__close-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+}
+.modal__close-button svg {
+  fill: var(--color-grey);
+}
+@media (any-hover: hover) {
+  .modal__close-button:hover {
+    background-color: var(--color-grey);
+  }
+  .modal__close-button:hover svg {
+    fill: var(--color-light);
+  }
+}
+@media (any-hover: none) {
+  .modal__close-button:active {
+    background-color: var(--color-grey);
+  }
+  .modal__close-button:active svg {
+    fill: var(--color-light);
+  }
+}
+.modal__header {
+  justify-items: center;
+}
+.modal__title {
+  color: var(--color-dark);
+  margin-bottom: 1.25rem;
+}
+.modal__text {
+  color: var(--color-grey);
+}
+.modal__form {
+  display: grid;
+  row-gap: 1.25rem;
+}
+.modal__send-button {
+  justify-self: start;
+  padding-block: 0.625rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  font-weight: 500;
+  color: var(--color-dark);
+  font-size: 1.125rem;
+}
+.form-group__required-star {
+  color: var(--color-red);
+}
+.form-group__input {
+  padding: 0.625rem 0.9375rem;
+  border: 0.0625rem solid var(--color-grey);
+}
+
+.about {
+  padding-block: clamp(3.75rem, 1.6789215686rem + 8.4967320261vw, 11.875rem);
+  color: var(--color-dark);
+}
+.about__body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3.75rem;
+}
+.about__col-item:not(:last-child) {
+  margin-bottom: 3.75rem;
+}
+.about__col-value {
+  font-size: 4rem;
+  font-weight: 300;
+}
+.about__col-description {
+  color: var(--color-grey);
+}
+.about__col-title {
+  margin-bottom: 3.75rem;
 }
 
 /*# sourceMappingURL=main.css.map */
