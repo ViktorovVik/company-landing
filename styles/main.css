@@ -882,6 +882,11 @@ ul, ol, li {
   color: var(--color-grey);
   margin-bottom: 3.125rem;
 }
+@media (width <= 47.99875rem) {
+  .quote__title {
+    margin-bottom: 1.875rem;
+  }
+}
 .quote__content {
   display: grid;
   align-self: start;
@@ -892,6 +897,11 @@ ul, ol, li {
   font-size: 2.25rem;
   font-weight: 500;
   margin-bottom: 1.875rem;
+}
+@media (width <= 47.99875rem) {
+  .quote__text {
+    font-size: 1.25rem;
+  }
 }
 .quote__author {
   font-style: normal;
