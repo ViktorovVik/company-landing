@@ -1,0 +1,10 @@
+@use '../helpers' as *;
+
+.services {
+  padding-bottom: fluid(190, 60);
+
+  &__img {
+    margin-bottom: fluid(190, 60);
+    width: 100%;
+  }
+}

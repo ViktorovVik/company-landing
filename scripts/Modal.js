@@ -38,6 +38,10 @@ class Modal {
     })
 
     this.rootElement.addEventListener('click', this.onClickOutside)
+
+    this.rootElement.addEventListener('close', () => {
+      this.removeState();
+    });
   }
 }
 
