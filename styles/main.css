@@ -344,6 +344,7 @@ body {
 
 .h2 {
   font-size: clamp(1.5625rem, 1.4509803922rem + 0.4575163399vw, 2rem);
+  font-weight: 500;
   line-height: 1.3;
 }
 .h2--bigger {
@@ -907,6 +908,8 @@ ul, ol, li {
 .services__img {
   margin-bottom: clamp(3.75rem, 1.6789215686rem + 8.4967320261vw, 11.875rem);
   width: 100%;
+  height: 56.25rem;
+  object-fit: cover;
 }
 
 .accordion-group {
@@ -961,6 +964,73 @@ ul, ol, li {
 }
 .accordion__content-inner {
   overflow: hidden;
+}
+
+.soc1al {
+  display: flex;
+  column-gap: 1.25rem;
+}
+
+.footer {
+  padding-top: clamp(2.5rem, 1.7034313725rem + 3.2679738562vw, 5.625rem);
+  padding-bottom: clamp(2.5rem, 1.1299019608rem + 5.6209150327vw, 7.875rem);
+  background-color: var(--color-dark);
+}
+.footer__inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 3.75rem;
+}
+@media (width <= 47.99875rem) {
+  .footer__inner {
+    grid-template-columns: auto;
+    row-gap: 1.875rem;
+  }
+}
+.footer__logo {
+  margin-bottom: 3rem;
+}
+.footer__address {
+  margin-bottom: 1.875rem;
+  color: var(--color-grey);
+}
+.footer__title {
+  margin-bottom: 1.875rem;
+}
+.footer__form {
+  position: relative;
+}
+.footer__input {
+  padding-bottom: 1.5rem;
+  padding-right: 3.125rem;
+  background: transparent;
+  border: none;
+  border-bottom: var(--border);
+  color: var(--color-light);
+  width: 100%;
+}
+@media (any-hover: hover) {
+  .footer__input:hover {
+    border-bottom: 1px solid var(--color-light);
+  }
+}
+@media (any-hover: none) {
+  .footer__input:active {
+    border-bottom: 1px solid var(--color-light);
+  }
+}
+.footer__button {
+  position: absolute;
+  top: 0;
+  right: 1.5rem;
+  padding-left: 3.125rem;
+  border: none;
+  background-color: transparent;
+  color: var(--color-light);
+}
+.footer__button svg {
+  stroke: var(--color-light);
+  fill: transparent;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,64 @@
+@use '../helpers' as *;
+
+.footer {
+  padding-top: fluid(90, 40);
+  padding-bottom: fluid(126, 40);
+  background-color: var(--color-dark);
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: rem(60);
+
+    @include mobile {
+      grid-template-columns: auto;
+      row-gap: rem(30);
+    }
+  }
+
+  &__logo {
+    margin-bottom: rem(48);
+  }
+
+  &__address {
+    margin-bottom: rem(30);
+    color: var(--color-grey);
+  }
+
+  &__title {
+    margin-bottom: rem(30);
+  }
+
+  &__form {
+    position: relative;
+  }
+
+  &__input {
+    padding-bottom: rem(24);
+    padding-right: rem(50);
+    background: transparent;
+    border: none;
+    border-bottom: var(--border);
+    color: var(--color-light);
+    width: 100%;
+
+    @include hover {
+      border-bottom: 1px solid var(--color-light);
+    }
+  }
+
+  &__button {
+    position: absolute;
+    top: 0;
+    right: rem(24);
+    padding-left: rem(50);
+    border: none;
+    background-color: transparent;
+    color: var(--color-light);
+
+    svg {
+      stroke: var(--color-light);
+      fill: transparent;
+    }
+  }
+}
