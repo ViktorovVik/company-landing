@@ -1,0 +1,9 @@
+@use '../helpers' as *;
+
+.accordion-group {
+  display: grid;
+  row-gap: rem(40);
+  color: var(--color-dark);
+
+
+}

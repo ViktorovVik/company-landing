@@ -6,8 +6,9 @@
   --color-dark: #1d1d1f;
   --color-red: #ff5500;
 
-
   --font-family-base: 'Inter', sans-serif;
+
+  --border: 1px solid var(--color-grey);
 
   --container-width: #{rem(1200)};
   --container-padding-x: #{rem(15)};
