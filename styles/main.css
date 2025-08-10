@@ -811,4 +811,68 @@ ul, ol, li {
   }
 }
 
+.portfolio {
+  padding-bottom: clamp(3.75rem, 1.6789215686rem + 8.4967320261vw, 11.875rem);
+}
+.portfolio__list {
+  display: grid;
+  row-gap: 7.5rem;
+}
+@media (width <= 47.99875rem) {
+  .portfolio__list {
+    row-gap: 3.75rem;
+  }
+}
+
+.item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "content image";
+  column-gap: 3.75rem;
+}
+@media (width <= 63.99875rem) {
+  .item {
+    column-gap: 1.875rem;
+  }
+}
+@media (width <= 47.99875rem) {
+  .item {
+    grid-template-areas: "content" "image";
+    grid-template-columns: 1fr;
+    justify-items: center;
+    row-gap: 1.875rem;
+  }
+}
+.item__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  row-gap: 1.25rem;
+  grid-area: content;
+}
+.item__title {
+  color: var(--color-grey);
+}
+.item__description {
+  color: var(--color-dark);
+  margin-bottom: 2.5rem;
+}
+.item__img {
+  grid-area: image;
+}
+@media (width <= 47.99875rem) {
+  .item__img {
+    width: 100%;
+  }
+}
+.item--reverse {
+  grid-template-areas: "image content";
+}
+@media (width <= 47.99875rem) {
+  .item--reverse {
+    grid-template-areas: "content" "image";
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
