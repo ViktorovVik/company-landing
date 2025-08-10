@@ -1,0 +1,31 @@
+@use '../helpers' as *;
+
+.quote {
+  padding-bottom: fluid(190, 60);
+
+  &__title {
+    color: var(--color-grey);
+    margin-bottom: rem(50);
+  }
+
+  &__content {
+    display: grid;
+    align-self: start;
+    max-width: 82ch;
+    color: var(--color-dark);
+  }
+
+  &__text {
+    font-size: rem(36);
+    font-weight: 500;
+    margin-bottom: rem(30);
+  }
+
+  &__author {
+    font-style: normal;
+
+    &-role {
+      color: var(--color-grey);
+    }
+  }
+}
