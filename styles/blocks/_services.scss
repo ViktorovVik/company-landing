@@ -6,5 +6,7 @@
   &__img {
     margin-bottom: fluid(190, 60);
     width: 100%;
+    height: rem(900);
+    object-fit: cover;
   }
 }
