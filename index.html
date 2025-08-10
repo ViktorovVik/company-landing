@@ -46,7 +46,7 @@
             <li class="header__menu-item">
               <a
                 class="header__menu-link"
-                href="/"
+                href="#about"
               >
                 About
               </a>
@@ -103,7 +103,7 @@
       </div>
     </section>
 
-    <section class="about" aria-labelledby="about-title">
+    <section class="about" id="about" aria-labelledby="about-title">
       <div class="about__inner container">
         <div class="about__body">
           <div class="about__col">
@@ -128,6 +128,30 @@
               <p>Amet, mattis dapibus malesuada arcu dapibus nec efficitur et&nbsp;dictum. In&nbsp;sit odio. Tempus leo, dictum. Sit mattis mattis lorem cursus velit sit sed et&nbsp;vitae quam, sed nulla dapibus venenatis odio.</p>
               <p>Venenatis sapien aenean adipiscing lacinia nec lacinia lacinia et&nbsp;quam, ultricies. Dictum. Ipsum sodales sit id&nbsp;nec sed sodales mattis mollis quis, pellentesque habitasse&nbsp;ex.</p>
             </div>
+          </div>
+        </div>
+        <div class="about__video-player video-player" data-js-video-player>
+          <video
+            class="video-player__video"
+            src="./assets/videos/example.mp4"
+            width="1200"
+            height="630"
+            poster="./assets/images/video/poster.webp"
+            data-js-video-player-video
+          ></video>
+          <div class="video-player__panel is-active" data-js-video-player-panel>
+            <button
+              class="video-player__play-button"
+              type="button"
+              aria-label="Play button"
+              title="Play button"
+              data-js-video-player-play-button
+            >
+              <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="50"/>
+                <path d="M63 50L44.25 62.9904L44.25 37.0096L63 50Z"/>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
