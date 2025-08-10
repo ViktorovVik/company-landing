@@ -8,6 +8,12 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: rem(60);
+    padding-bottom: fluid(190, 60);
+
+    @include tablet {
+      grid-template-columns: auto;
+      row-gap: rem(40);
+    }
   }
 
   &__col {
