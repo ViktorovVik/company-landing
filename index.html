@@ -13,7 +13,7 @@
   <script src="./scripts/main.js" type="module" defer></script>
 </head>
 <body>
-  <header class="header section-to-watch" data-js-header data-js-observe>
+  <header class="header" data-js-header >
     <div class="header__inner container">
       <a class="header__logo logo" href="/" aria-label="Home Page" title="Home Page">
         <img
@@ -30,7 +30,7 @@
             <li class="header__menu-item">
               <a
                 class="header__menu-link"
-                href="#!"
+                href="#portfolio"
               >
                 Portfolio
               </a>
@@ -157,7 +157,7 @@
       </div>
     </section>
 
-    <section class="portfolio section-to-watch" id="portfolio" aria-labelledby="portfolio-title" data-js-observe >
+    <section class="portfolio section-to-watch" id="portfolio" aria-labelledby="portfolio-title" data-js-observe>
       <h2 class="h2 visually-hidden" id="portfolio-title"></h2>
       <div class="portfolio__inner container">
           <ul class="portfolio__list">
@@ -209,7 +209,7 @@
       </div>
     </section>
 
-    <section class="quote section-to-watch" id="quote" aria-labelledby="quote-title" data-js-observe d>
+    <section class="quote section-to-watch" id="quote" aria-labelledby="quote-title" data-js-observe>
       <h2 class="h2 visually-hidden" id="quote-title">Our mission</h2>
       <div class="quote__inner container">
         <h3 class="quote__title h4">Quote</h3>
@@ -299,6 +299,162 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="work section-to-watch" id="work" aria-labelledby="work-title" data-js-observe >
+      <h2 class="visually-hidden" id="work-title">That’s how we do it</h2>
+      <div class="work__inner tabs" data-js-tabs>
+        <h3 class="visually-hidden" id="work-category-title">Work category</h3>
+        <header class="tabs__header ">
+          <div class="tabs__buttons container" role="tablist" aria-labelledby="work-category-title">
+            <button
+              class="tabs__button button is-active"
+              id="tab-1"
+              type="button"
+              role="tab"
+              aria-controls="tabpanel-1"
+              aria-selected="true"
+              data-js-tabs-button
+
+            >
+              Experienced Workers
+              </button>
+            <button
+              class="tabs__button button"
+              id="tab-2"
+              type="button"
+              role="tab"
+              aria-controls="tabpanel-2"
+              aria-selected="false"
+              tabindex="-1"
+              data-js-tabs-button
+
+            >
+              Space Exploration
+            </button>
+            <button
+              class="tabs__button button"
+              id="tab-3"
+              type="button"
+              role="tab"
+              aria-controls="tabpanel-3"
+              aria-selected="false"
+              tabindex="-1"
+              data-js-tabs-button
+
+            >
+              Building Ethics
+            </button>
+            <button
+              class="tabs__button button"
+              id="tab-4"
+              type="button"
+              role="tab"
+              aria-controls="tabpanel-4"
+              aria-selected="false"
+              tabindex="-1"
+              data-js-tabs-button
+
+            >
+              Renewable Energy
+            </button>
+          </div>
+        </header>
+        <div class="tabs__body container">
+          <div
+            class="tabs__content section-to-watch is-active"
+            id="tabpanel-1"
+            aria-labelledby="tab-1"
+            tabindex="0"
+            data-js-tabs-content
+            data-js-observe
+          >
+          <div class="tabs__content-text">
+            <h4 class="tabs__content-title h3">Only high-skilled workers</h4>
+            <div class="tabs__content-description">
+              <p>Urna nisi, arcu cras nunc. Aenean quam est lobortis mi&nbsp;non fames dictum suspendisse. Morbi mauris cras massa ut&nbsp;dolor quis sociis mollis augue. Nunc, sodales tortor sit diam mi&nbsp;amet massa. Fermentum diam diam sociis vestibulum. Nulla nisl accumsan, id&nbsp;dignissim massa ut&nbsp;amet. Amet enim, nisi tempus vehicula.</p>
+            </div>
+          </div>
+            <img
+              class="tabs__content-img"
+              src="./assets/images/work/img-1.webp"
+              alt=""
+              width="600"
+              height="440"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="tabs__content section-to-watch"
+            id="tabpanel-2"
+            aria-labelledby="tab-2"
+            tabindex="0"
+            data-js-tabs-content
+            data-js-observe
+          >
+            <div class="tabs__content-text">
+              <h4 class="tabs__content-title h3">Only great exploration</h4>
+              <div class="tabs__content-description">
+                <p>Urna nisi, arcu cras nunc. Aenean quam est lobortis mi&nbsp;non fames dictum suspendisse. Morbi mauris cras massa ut&nbsp;dolor quis sociis mollis augue. Nunc, sodales tortor sit diam mi&nbsp;amet massa. Fermentum diam diam sociis vestibulum. Nulla nisl accumsan, id&nbsp;dignissim massa ut&nbsp;amet. Amet enim, nisi tempus vehicula.</p>
+              </div>
+            </div>
+            <img
+              class="tabs__content-img"
+              src="./assets/images/work/img-2.webp"
+              alt=""
+              width="600"
+              height="440"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="tabs__content section-to-watch"
+            id="tabpanel-3"
+            aria-labelledby="tab-3"
+            tabindex="0"
+            data-js-tabs-content
+            data-js-observe
+          >
+            <div class="tabs__content-text">
+              <h4 class="tabs__content-title h3">Only politeness and building ethics</h4>
+              <div class="tabs__content-description">
+                <p>Urna nisi, arcu cras nunc. Aenean quam est lobortis mi&nbsp;non fames dictum suspendisse. Morbi mauris cras massa ut&nbsp;dolor quis sociis mollis augue. Nunc, sodales tortor sit diam mi&nbsp;amet massa. Fermentum diam diam sociis vestibulum. Nulla nisl accumsan, id&nbsp;dignissim massa ut&nbsp;amet. Amet enim, nisi tempus vehicula.</p>
+              </div>
+            </div>
+            <img
+              class="tabs__content-img"
+              src="./assets/images/work/img-3.webp"
+              alt=""
+              width="600"
+              height="440"
+              loading="lazy"
+            />
+          </div>
+          <div
+            class="tabs__content section-to-watch"
+            id="tabpanel-4"
+            aria-labelledby="tab-4"
+            tabindex="0"
+            data-js-tabs-content
+            data-js-observe
+          >
+            <div class="tabs__content-text">
+              <h4 class="tabs__content-title h3">Only renewable energy</h4>
+              <div class="tabs__content-description">
+                <p>Urna nisi, arcu cras nunc. Aenean quam est lobortis mi&nbsp;non fames dictum suspendisse. Morbi mauris cras massa ut&nbsp;dolor quis sociis mollis augue. Nunc, sodales tortor sit diam mi&nbsp;amet massa. Fermentum diam diam sociis vestibulum. Nulla nisl accumsan, id&nbsp;dignissim massa ut&nbsp;amet. Amet enim, nisi tempus vehicula.</p>
+              </div>
+            </div>
+            <img
+              class="tabs__content-img"
+              src="./assets/images/work/img-4.webp"
+              alt=""
+              width="600"
+              height="440"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
