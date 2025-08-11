@@ -509,6 +509,7 @@ ul, ol, li {
   position: absolute;
   left: 0;
   top: 0;
+  z-index: 100;
   padding-block: 2.5rem;
   width: 100%;
   animation-name: scrolling-header;
@@ -954,6 +955,7 @@ ul, ol, li {
   position: relative;
   padding-right: 3.125rem;
   margin-bottom: 1.875rem;
+  cursor: pointer;
 }
 .accordion__title:before, .accordion__title:after {
   position: absolute;
